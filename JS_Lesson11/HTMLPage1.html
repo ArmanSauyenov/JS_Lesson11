@@ -1,0 +1,131 @@
+﻿<!--Практика
+1. Создать на каждое подзадание кнопку, назвать соответственно номеру задания (1.1, 1.2 и т.д.).
+    Одну кнопку для очистки всех подсветок (удаления класса "h"). Подсветка в любом случае должна
+    сама удалиться, через 10 секунд после того как добавилась.
+
+    В каждом поздадании условие, по которому нужно найти элемент и присвоить ему класс "h"
+    Подзадания:
+    1.1 Все элементы li, которые находятся вне списка #list2 и содержат класс item
+    1.2 Первый элемент в последнем списке (список - ul)
+    1.3 Все элементы li, в тексте которых содержиться ".2"
+    1.4 Все третие элементы каждого списка
+    1.5 Следующий элемент после поля ввода (input[type=text]) со значением 2 (value=2)
+    1.6 Все поля ввода, в тексте которых содержится число 12
+    1.7 Текстовый блок P, который лежит на глубине 3 div элементов
+    1.8 Все четные элементы в первом списке и нечетные во втором и третьем
+    1.9 Все input элементы, значение которых ровно 12 или содержит 34
+
+2. При выборе radio-кнопки "Вкл", из всех 4 текстовых полей должно взяться значение,
+    каждое это значение должно использоваться как отдельный селектор ("div", "#list", и т.д.)
+    и всем элементам подходящим под селектор 1 поля должен добавиться класс h1, 2 поля h2, и т.д.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .h1 {
+            color: black;
+            background-color: aqua;
+            border: 1px solid aqua;
+        }
+
+        .h2 {
+            color: black;
+            background-color: deeppink;
+            border: 1px solid deeppink;
+        }
+
+        .h3 {
+            color: black;
+            background-color: coral;
+            border: 1px solid coral;
+        }
+
+        .h4 {
+            color: black;
+            background-color: chartreuse;
+            border: 1px solid chartreuse;
+        }
+
+        .h {
+            color: black;
+            background-color: blue;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="list">
+            <li class="item">Item 1.1</li>
+            <li class="item">Item 1.2</li>
+            <li>Item 1.3</li>
+        </ul>
+
+        <ul id="list2">
+            <li class="item">Item 2.1</li>
+            <li class="item">Item 2.2</li>
+            <li>Item 2.3</li>
+        </ul>
+
+        <ul id="list3">
+            <li class="item">Item 3.1</li>
+            <li class="item">Item 3.2</li>
+            <li>Item 3.3</li>
+            <li>Item 3.4</li>
+        </ul>
+    </div>
+
+    <input type="text" value="12">
+    <input type="text" value="123">
+    <input type="text" value="1234">
+    <input type="text" value="text">
+
+    <label for="radio1">
+        <input id="radio1" name="r" type="radio" value="12"> Вкл
+    </label>
+
+    <label for="radio2">
+        <input id="radio2" name="r" type="radio" value="34"> Выкл
+    </label>
+
+    <input type="button" value="button">
+
+    <div>
+        <div>
+            <div>
+                <p>Text</p>
+            </div>
+            <p>P 1</p>
+            <p>P 2</p>
+            <p>P 3</p>
+        </div>
+        <div>
+            <p>Text 2</p>
+        </div>
+    </div>
+    <div>
+        <span>
+            <p>123</p>
+        </span>
+    </div>
+
+    <input type="button" value="1.1" />
+    <input type="button" value="1.2" />
+    <input type="button" value="1.3" />
+    <input type="button" value="1.4" />
+    <input type="button" value="1.5" />
+    <input type="button" value="1.6" />
+    <input type="button" value="1.7" />
+    <input type="button" value="1.8" />
+    <input type="button" value="1.9" />
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="JavaScript1.js"></script>
+</body>
+</html>
